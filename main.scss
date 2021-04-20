@@ -1,0 +1,206 @@
+$bg: #25272b;
+$primary: #daaa0e;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: $bg;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+}
+header{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    // border-bottom: 1px solid lighten($bg, 10%);
+    margin-bottom: 2em;
+    .logo a{
+        color: #fff;
+        text-decoration: none;
+        padding: 1em;
+        span{
+            color: lighten($bg, 50%);
+        }
+    }
+    nav{
+        ul{
+            display: flex;
+            list-style-type: none;
+            li{
+                a{
+                    padding: 1em;
+                    color: lighten($bg, 40%);
+                    text-decoration: none;
+                    transition: color .1s;
+                    &:hover{
+                        color: lighten($bg, 80%);
+                        
+                    }
+                }
+                .nav-active{
+                    color: lighten($bg, 80%);
+                }
+            }
+        }
+    }
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-size: 1em;
+}
+.title{
+    text-align: center;
+    font-weight: 400;
+    user-select: none;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+}
+.kb-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lighten($bg, 5%);
+    color: lighten($bg, 80%);
+    // border-radius: 8px;
+    flex-basis: 3em;
+    height: 3em;
+    margin: 0.1875em;
+    user-select: none;
+}
+.active-btn{
+    background: lighten($bg, 80%);
+    color: darken($bg, 10%);
+}
+.kb-gap{
+    width: 3em;
+    height: 3em;
+    margin: 3px;
+}
+.keyboard{
+    display: flex;
+    background: darken($bg, 5%);
+    margin: 2em 0 1em;
+    &-main{
+        padding: .9em;
+        display: flex;
+        flex-direction: column;
+        width: 52em;
+        .row{
+            display: flex;
+            justify-content: center;
+            
+            .kb-wide{
+                flex-grow: 1;
+            }
+            .kb-space{
+                flex-grow: 10;
+            }
+        }
+        .f-row{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1em;
+            .group{
+                display: flex;
+                width: 14em;
+                justify-content: flex-end;
+                // background: #f0c;
+                // border: 1px solid yellow;
+            }
+        }
+    }
+    &-side{
+        // border-radius: 1em;
+        padding: .9em;
+        display: flex;
+        flex-direction: column;
+        .row{
+            display: flex;
+            justify-content: flex-end;
+
+        }
+        .f-row{
+            display: flex;
+            margin-bottom: 1em;
+            justify-content: flex-end;
+        }
+    }
+}
+
+.pressed{
+    background: $primary;
+}
+.checked{
+    background: #fff;
+    color: $bg;
+    .img-windows{
+        filter: none;
+      }
+}
+.panel{
+    display: flex;
+    justify-content: space-between;
+}
+.lastInput{
+    color: lighten($bg, 50%);
+}
+#lastBtn{
+    color: lighten($primary, 10%);
+}
+.kb-reset{
+    color: lighten($bg, 50%);
+    cursor: pointer;
+    transition: .2s;
+    &:hover{
+        color: rgb(196, 57, 80);
+    }
+}
+.img-windows{
+    background: url("img/Windows_logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 35%;
+    width: 100%;
+    height: 100%;
+    filter: invert(89%) sepia(100%) saturate(0%) hue-rotate(333deg) brightness(105%) contrast(101%);
+  }
+@media all and (max-width: 1200px){ //smaller desktop viewports
+    .container{
+        font-size: .9em;
+    }
+}
+@media all and (max-width: 992px){ //most tablets
+    .container{
+        font-size: .73em;
+    }
+}
+@media all and (max-width: 768px){ //small devices and most phones
+    .container{
+        font-size: .45em;
+        //background-color: $primary;
+        
+    }
+}
+@media all and (max-width: 480px){ //smaller phone viewport
+    .container{
+        font-size: .4em;
+    }
+}

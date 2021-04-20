@@ -2,11 +2,159 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <title>Keybort Checker</title>
 </head>
 <body>
-    Hello World
+    <header>
+        <div class="logo"><a href="index.html">KeyBort<span>Checker</span></a></div>
+        <!-- <nav>
+            <ul>
+                <li><a href="index.html">Type</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav> -->
+    </header>
+    <div class="container">
+        <div class="main">
+            <h1 class="title">Test Your keyboard!</h1>
+            <div class="keyboard">
+                <div class="keyboard-main">
+                    <div class="f-row">
+                        <div class="kb-btn" key="27">Esc</div>
+                        <div class="group">
+                            <div class="kb-btn" key="112">F1</div>
+                            <div class="kb-btn" key="113">F2</div>
+                            <div class="kb-btn" key="114">F3</div>
+                            <div class="kb-btn" key="115">F4</div>
+                        </div>
+                        <div class="group">
+                            <div class="kb-btn" key="116">F5</div>
+                            <div class="kb-btn" key="117">F6</div>
+                            <div class="kb-btn" key="118">F7</div>
+                            <div class="kb-btn" key="119">F8</div>
+                        </div>
+                        <div class="group">
+                            <div class="kb-btn" key="120">F9</div>
+                            <div class="kb-btn" key="121">F10</div>
+                            <div class="kb-btn" key="122">F11</div>
+                            <div class="kb-btn" key="123">F12</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="kb-btn" key="192">`~</div>
+                        <div class="kb-btn" key="49">1</div>
+                        <div class="kb-btn" key="50">2</div>
+                        <div class="kb-btn" key="51">3</div>
+                        <div class="kb-btn" key="52">4</div>
+                        <div class="kb-btn" key="53">5</div>
+                        <div class="kb-btn" key="54">6</div>
+                        <div class="kb-btn" key="55">7</div>
+                        <div class="kb-btn" key="56">8</div>
+                        <div class="kb-btn" key="57">9</div>
+                        <div class="kb-btn" key="48">0</div>
+                        <div class="kb-btn" key="189">-_</div>
+                        <div class="kb-btn" key="187">=+</div>
+                        <div class="kb-btn kb-wide" key="8">&#8592;</div>
+                    </div>
+                    <div class="row">
+                        <div class="kb-btn kb-wide" key="9">Tab</div>
+                        <div class="kb-btn" key="81">q</div>
+                        <div class="kb-btn" key="87">w</div>
+                        <div class="kb-btn" key="69">e</div>
+                        <div class="kb-btn" key="82">r</div>
+                        <div class="kb-btn" key="84">t</div>
+                        <div class="kb-btn" key="89">y</div>
+                        <div class="kb-btn" key="85">u</div>
+                        <div class="kb-btn" key="73">i</div>
+                        <div class="kb-btn" key="79">o</div>
+                        <div class="kb-btn" key="80">p</div>
+                        <div class="kb-btn" key="219">[&#123;</div>
+                        <div class="kb-btn" key="221">]&#125;</div>
+                        <div class="kb-btn kb-wide" key="220">\|</div>
+                    </div>
+                    <div class="row">
+                        <div class="kb-btn kb-wide" key="20">Caps</div>
+                        <div class="kb-btn" key="65">a</div>
+                        <div class="kb-btn" key="83">s</div>
+                        <div class="kb-btn" key="68">d</div>
+                        <div class="kb-btn" key="70">f</div>
+                        <div class="kb-btn" key="71">g</div>
+                        <div class="kb-btn" key="72">h</div>
+                        <div class="kb-btn" key="74">j</div>
+                        <div class="kb-btn" key="75">k</div>
+                        <div class="kb-btn" key="76">l</div>
+                        <div class="kb-btn" key="186">;:</div>
+                        <div class="kb-btn" key="222">'"</div>
+                        <div class="kb-btn kb-wide" key="13">Enter</div>
+                    </div>
+                    <div class="row">
+                        <div class="kb-btn kb-wide" key="16">Shift</div>
+                        <div class="kb-btn" key="90">z</div>
+                        <div class="kb-btn" key="88">x</div>
+                        <div class="kb-btn" key="67">c</div>
+                        <div class="kb-btn" key="86">v</div>
+                        <div class="kb-btn" key="66">b</div>
+                        <div class="kb-btn" key="78">n</div>
+                        <div class="kb-btn" key="77">m</div>
+                        <div class="kb-btn" key="188">,&lt;</div>
+                        <div class="kb-btn" key="190">.&gt;</div>
+                        <div class="kb-btn" key="191">/?</div>
+                        <div class="kb-btn kb-wide" key="16">Shift</div>
+                    </div>
+                    <div class="row">
+                        <div class="kb-btn kb-wide" key="17">Ctrl</div>
+                        <div class="kb-btn kb-wide" key="91"><div class="img-windows"></div></div>
+                        <div class="kb-btn kb-wide" key="18">Alt</div>
+                        <div class="kb-btn kb-space" key="32"></div>
+                        <div class="kb-btn kb-wide" key="18">Alt</div>
+                        <div class="kb-btn kb-wide" key="93">Menu</div>
+                        <div class="kb-btn kb-wide" key="17">Ctrl</div>
+                    </div>
+                </div>
+                <div class="keyboard-side">
+                    <div class="f-row">
+                        <div class="kb-btn" key="44">Prt<br>Scr</div>
+                        <div class="kb-btn" key="145">Scrl<br>Lock</div>
+                        <div class="kb-btn" key="19">Paus</div>
+                    </div>
+                    <div class="row">
+                        <div class="kb-btn" key="45">Ins</div>
+                        <div class="kb-btn" key="36">Home</div>
+                        <div class="kb-btn" key="33">PgUp</div>
+                    </div>
+                    <div class="row">
+                        <div class="kb-btn" key="46">Del</div>
+                        <div class="kb-btn" key="35">End</div>
+                        <div class="kb-btn" key="34">PgDn</div>
+                    </div>
+                    <div class="row">
+                        <div class="kb-gap"></div>
+                        <div class="kb-gap"></div>
+                        <div class="kb-gap"></div>
+                    </div>
+                    <div class="row">
+                        <div class="kb-gap"></div>
+                        <div class="kb-btn" key="38">&#11205;</div>
+                        <div class="kb-gap"></div>
+                    </div>
+                    <div class="row">
+                        <div class="kb-btn" key="37">&#11207;</div>
+                        <div class="kb-btn" key="40">&#11206;</div>
+                        <div class="kb-btn" key="39">&#11208;</div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <p class="lastInput">Last input: <span id="lastBtn"></span></p>
+                <span class="kb-reset">Reset</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+    <script src="keybaord.js"></script>
 </body>
 </html>
