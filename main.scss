@@ -79,7 +79,8 @@ header{
     align-items: center;
     background: lighten($bg, 5%);
     color: lighten($bg, 80%);
-    // border-radius: 8px;
+    transition: background-color .2s;
+    transition: color .2s;
     flex-basis: 3em;
     height: 3em;
     margin: 0.1875em;
@@ -96,8 +97,10 @@ header{
 }
 .keyboard{
     display: flex;
+    justify-content: center;
     background: darken($bg, 5%);
     margin: 2em 0 1em;
+    transition: .2;
     &-main{
         padding: .9em;
         display: flex;
@@ -122,8 +125,6 @@ header{
                 display: flex;
                 width: 14em;
                 justify-content: flex-end;
-                // background: #f0c;
-                // border: 1px solid yellow;
             }
         }
     }
@@ -146,9 +147,11 @@ header{
 }
 
 .pressed{
+    transition: background-color .2s;
     background: $primary;
 }
 .checked{
+    transition: .2s;
     background: #fff;
     color: $bg;
     .img-windows{
@@ -183,6 +186,9 @@ header{
     height: 100%;
     filter: invert(89%) sepia(100%) saturate(0%) hue-rotate(333deg) brightness(105%) contrast(101%);
   }
+  .rotateDevice{
+    display: none;
+    }
 @media all and (max-width: 1200px){ //smaller desktop viewports
     .container{
         font-size: .9em;
@@ -195,6 +201,13 @@ header{
 }
 @media all and (max-width: 768px){ //small devices and most phones
     .container{
+        font-size: .60em;
+        //background-color: $primary;
+        
+    }
+}
+@media all and (max-width: 620px){ //small devices and most phones
+    .container{
         font-size: .45em;
         //background-color: $primary;
         
@@ -202,6 +215,55 @@ header{
 }
 @media all and (max-width: 480px){ //smaller phone viewport
     .container{
-        font-size: .4em;
+        font-size: .35em;
+    }
+    nav{
+        display: none;
+    }
+}
+@media all and (max-width: 370px){ //smaller phone viewport
+    .main{
+        display: none;
+    }
+    .rotateDevice{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 1rem;
+        .rotateDeviceText{
+            font-size: 1rem;
+            color: lighten($bg, 40%);
+            text-align: center;
+        }
+        .rotateDeviceImg{
+            max-width: 24em;
+            margin-bottom: 3em;
+            animation-name: rotateDeviceImgAnimation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+
+            filter: invert(59%) sepia(2%) saturate(1631%) hue-rotate(183deg) brightness(93%) contrast(91%);
+        }
+    }
+    
+    
+}
+@keyframes rotateDeviceImgAnimation {
+    0%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(45deg);
+    }
+    50%{
+        transform: rotate(0);
+    }
+    75%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(0);
     }
 }
